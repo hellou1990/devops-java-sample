@@ -22,8 +22,6 @@ pipeline {
     stages {
         stage ('checkout scm') {
             steps {
-                sh 'git config --global http.sslVerify false'
-                sh 'git config --global http.postBuffer 1048576000'
                 checkout(scm)
             }
         }
